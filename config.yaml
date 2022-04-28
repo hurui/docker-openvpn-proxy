@@ -1,0 +1,4 @@
+allow-lan: true
+log-level: info
+mixed-port: 7890
+mode: direct
