@@ -7,7 +7,7 @@ ARG TARGETVARIANT
 
 WORKDIR /tmp
 
-RUN set -x && apk add --no-cache ca-certificates tzdata openvpn && \
+RUN set -x && echo $TARGETVARIANT && apk add --no-cache ca-certificates tzdata openvpn && \
     wget -O Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb && \
     if [ "${TARGETARCH}" == "arm64" ]; then TARGETARCH=arm; fi && \
     wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.10.0/clash-linux-$TARGETARCH$TARGETVARIANT-$CLASH_VERSION.gz && \
