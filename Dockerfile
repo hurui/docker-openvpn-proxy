@@ -9,7 +9,7 @@ WORKDIR /tmp
 
 RUN apk add --no-cache ca-certificates tzdata openvpn && \
     wget -O Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb && \
-    if [ "${TARGETARCH:0:3}" == "arm" ]; then TARGETARCH=arm; fi && \
+    if [ "${TARGETARCH}" == "arm64" ]; then TARGETARCH=arm; fi && \
     wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.10.0/clash-linux-$TARGETARCH$TARGETVARIANT-$CLASH_VERSION.gz && \
     gzip -d clash.gz && \
     mkdir -p /app && \
