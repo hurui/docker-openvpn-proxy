@@ -12,7 +12,7 @@ RUN apk add --no-cache ca-certificates tzdata openvpn && \
     wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.10.0/clash-linux-$TARGETARCH$TARGETVARIANT-$CLASH_VERSION.gz && \
     gzip -d clash.gz && \
     mkdir -p /app && \
-    mv clash-linux-$TARGETARCH$TARGETVARIANT-$CLASH_VERSION /app/clash && \
+    mv clash /app/clash && \
     chmod +x /app/clash
 
 COPY config.yaml /app/clash.d/
