@@ -9,6 +9,8 @@ on:
   push:
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
+    branches:
+      - dev
   pull_request:
     branches: [ master ]
 
@@ -33,6 +35,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -72,6 +77,7 @@ jobs:
         uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
         with:
           context: .
+          platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
