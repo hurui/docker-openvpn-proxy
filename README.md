@@ -38,7 +38,7 @@ docker run --device=/dev/net/tun \
 
 If the openvpn service needs to set up an internal dns server, you need to add the `--dns=ip` parameter of docker run. 
 
-Example: Suppose the ip of the dns service is `10.0.0.1`, It is best to set up another public dns.
+> Suppose the ip of the dns service is `10.0.0.1`, It is best to set up another public dns.
 
 ```sh
 docker run --dns=10.0.0.1 --dns=1.1.1.1 ...
