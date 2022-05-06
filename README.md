@@ -1,4 +1,4 @@
-![docker-publish](https://github.com/hurui/docker-openvpn-proxy/actions/workflows/docker-publish.yml/badge.svg) ![clash-version](https://img.shields.io/badge/clash-v1.10.0-blue)![alpine](https://img.shields.io/badge/alpine-v3.15-blue) ![openvpn-version](https://img.shields.io/badge/openvpn-v2.5.6-blue) ![license](https://img.shields.io/github/license/hurui/docker-openvpn-proxy)
+![docker-publish](https://github.com/hurui/docker-openvpn-proxy/actions/workflows/docker-publish.yml/badge.svg) ![clash-version](https://img.shields.io/badge/clash-v1.10.0-blue) ![alpine](https://img.shields.io/badge/alpine-v3.15-blue) ![openvpn-version](https://img.shields.io/badge/openvpn-v2.5.6-blue) ![license](https://img.shields.io/github/license/hurui/docker-openvpn-proxy)
 
 ## 🗺 Overview
 
