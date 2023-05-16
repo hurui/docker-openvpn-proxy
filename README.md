@@ -7,13 +7,13 @@ The Computer can be a Mac mini, Intel nuc, router, or any x86/arm64 device
 ```mermaid
   graph LR;
   		subgraph R[Computer]
-  		p[process] --http-proxy--> container
+  		p[program] --http-proxy--> container
   		subgraph docker
   		container
   		end
       end
       PC --http-proxy--> container
-      PHONE --http-proxy--> container
+      Phone --http-proxy--> container
       container --> OpenVPN((OpenVPN Network))
 ```
 
